@@ -1,0 +1,24 @@
+
+<div id="contact">
+    <form name="formContact" ng-submit="contactSubmit()">
+
+        <input type="text" name="text" class="feedback-input" placeholder="Temat" ng-model="mail.topic"/>
+
+        <input type="email" name="email" class="feedback-input"  placeholder="Twój email" ng-model="mail.from" ng-required="true"
+               ng-minlength="3" ng-maxlength="30"/>
+        <div ng-show="formContact.email.$invalid && formContact.email.$touched">
+            <small style="color:#FA1126; display: block; text-align: center">Niepoprawny email!</small>
+        </div>
+
+        <textarea name="text" class="feedback-input" placeholder="Treść" ng-model="mail.content" required></textarea>
+        <input type="submit" value="Wyślij" ng-disabled="formContact.$invalid"/>
+
+        <div class="info" ng-show="info">
+            {{info}}
+        </div>
+
+        <div class="error" ng-show="error">
+            {{error}}
+        </div>
+    </form>
+</div>
