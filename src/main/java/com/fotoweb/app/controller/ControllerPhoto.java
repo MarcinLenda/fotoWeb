@@ -67,6 +67,10 @@ public class ControllerPhoto {
                                     @RequestParam("name") String nameAlbum, @RequestParam("descritpion")String description){
         return uploadPhoto.uploadPhoto(file, nameAlbum, description);
     }
+
+    @RequestMapping(value = "/uploadThumbnails", method = RequestMethod.POST)
+    public @ResponseBody ResponseEntity handleFileUploadThumbnail(@RequestParam("file") MultipartFile file,
+                                                                  @RequestParam("name") String nameAlbum){
+        return null;
+    }
 }
-
-

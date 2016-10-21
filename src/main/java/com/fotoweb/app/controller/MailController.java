@@ -7,6 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 /**
  * Created by Promar on 12.09.2016.
  */
@@ -15,6 +18,7 @@ public class MailController {
 
     private final MailService mailService;
     private final String setTo = "777marcinlenda777@gmail.com";
+    private final Map<String, Object> response = new LinkedHashMap<>();
 
     @Autowired
     public MailController(MailService mailService) {

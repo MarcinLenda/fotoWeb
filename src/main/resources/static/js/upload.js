@@ -17,30 +17,7 @@ app .directive('fileModel', ['$parse', function ($parse) {
     };
 }]);
 
-app.service('fileUpload', ['$http', function ($http) {
-    var photoInfo = "";
-    var photoError = "";
-    this.uploadFileToUrl = function(file, nameAlbum, description){
-        var fd = new FormData();
 
-
-        fd.append('file', file);
-        fd.append('name', nameAlbum );
-        fd.append('descritpion',description );
-
-        $http.post("http://localhost:8080/photo/upload", fd, {
-            transformRequest: angular.identity,
-            headers: {'Content-Type': undefined},
-            data: fd
-        })
-            .success(function(){
-                photoInfo = "Zdjęcie dodano do albumu:"+nameAlbum;
-            })
-            .error(function(){
-                photoError = "Nie udało się dodać zdjęcia";
-            });
-    }
-}]);
 app.controller('myCtrlUpload', ['$scope','$http', 'fileUpload', function($scope, $http, fileUpload){
 
     $scope.myFile ="";
@@ -49,6 +26,7 @@ app.controller('myCtrlUpload', ['$scope','$http', 'fileUpload', function($scope,
 
     $scope.size = "1";
 
+    console.log('Sciezka zdjecia'+fileUpload.getur);
 
     $scope.uploadFile = function(){
 

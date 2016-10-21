@@ -27,7 +27,9 @@
 
                 <button type="submit" class="btn">Zarejestruj</button>
                 <a href="#/login" >Masz już konto?</a>
-            {{register}}
+                        <div ng-repeat="response in registerResponse">
+                            {{response}}
+                        </div>
         </div>
     </form>
 </div>

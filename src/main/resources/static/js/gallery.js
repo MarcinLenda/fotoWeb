@@ -7,6 +7,10 @@ app.controller('albumCtrl', function($scope, $http, $window) {
   $scope.images = {};
   $scope.selected ={};
 
+
+
+
+
   $scope.deletePhoto = function() {
 
     $scope.images = $.grep($scope.images, function( image ) {

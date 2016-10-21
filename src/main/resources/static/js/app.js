@@ -62,8 +62,7 @@ var app = angular.module('myApp', [
         .when('/info', {
             templateUrl: 'views/info.html',
             controller: 'albumCtrl'
-        })
-        .otherwise({redirectTo: '/'});
+        }).otherwise({redirectTo: '/'});
         
     $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 })

@@ -9,6 +9,9 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.csrf.CsrfTokenRepository;
+import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
+
 
 /**
  * Created by Promar on 06.10.2016.
@@ -16,6 +19,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @Configuration
 @EnableGlobalMethodSecurity(securedEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+
+    public static final String REMEMBER_ME_KEY = "remember-me";
+
+
 
     @Autowired
     private UserDetailsService userDetailsService;
@@ -35,10 +42,20 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/fonts/**").permitAll()
                 .antMatchers("/styles/**").permitAll()
                 .antMatchers("/home/newUser").permitAll()
+                .antMatchers("/myAccount/register").permitAll()
                 .antMatchers("/views/admin.html").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
+                .logout()
+                .logoutSuccessUrl("http://localhost:8080/#/login")
+                .and()
                 .csrf().disable();
+    }
+
+    private CsrfTokenRepository csrfTokenRepository() {
+        HttpSessionCsrfTokenRepository repository = new HttpSessionCsrfTokenRepository();
+        repository.setHeaderName("X-XSRF-TOKEN");
+        return repository;
     }
 
     @Bean

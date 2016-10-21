@@ -129,7 +129,7 @@ angular.module('app').config(function (LightboxProvider) {
 });
 ```
 
-For more custom behaviour, see the [documentation](src/lightbox-service.js) of the methods `calculateImageDimensionLimits` and `calculateModalDimensions`.
+For more custom behaviour, see the [documentation](src/lightbox-services.js) of the methods `calculateImageDimensionLimits` and `calculateModalDimensions`.
 
 ### Videos
 

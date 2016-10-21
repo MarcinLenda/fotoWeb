@@ -17,14 +17,14 @@ public class UserEntity {
     @Id
     private String ID;
 
-    @NotNull(message = "Musisz podać login!")
+    @NotNull(message = "wartość nie może być pusta")
     @Size(min = 3, max = 20, message = "Nazwa użytkownika musi zawierac minimalnie 3 znaki, a" +
             "maksymanie 12.")
     private String username;
 
     @NotNull(message = "Musisz podać hasło!")
     @Size(min = 3, max = 20, message = "Hasło musi zawierac minimalnie 3 znaki, a" +
-            "maksymanie 12.")
+           "maksymanie 12.")
     private String password;
 
     @Transient

@@ -3,81 +3,55 @@
  */
 
 
-app.controller('navigation',['$rootScope', '$http', '$location', '$route','$scope','fileUpload', function($rootScope, $http, $location, $route, $scope,fileUpload) {
+app.controller('navigation',['$rootScope', '$http', '$location', '$route','$scope','$window','fileUpload','service', function($rootScope, $http, $location, $route, $scope,$window,fileUpload, service) {
 
-        var self = this;
-        $scope.errorForm = '';
-        $scope.userInfo = 'test';
-        $scope.roles = '';
-
-        self.tab = function(route) {
-            return $route.current && route === $route.current.controller;
-        };
+    var self = this;
+    $scope.errorForm = '';
+    $scope.showUserName = service.showUserName;
 
 
 
-        var authenticated = function(credentials, callback) {
+    self.tab = function(route) {
+        return $route.current && route === $route.current.controller;
+    };
 
-            var headers = credentials ? {
-                authorization : "Basic "
-                + btoa(credentials.username + ":"
-                    + credentials.password)
-            } : {};
+     var authenticated = function (credentials, callback) {
+         service.authenticated(credentials,callback);
+    };
 
-            console.log("authenticated "+credentials);
+    self.credentials = {};
 
-            $http.get('/myAccount/user', {
-                headers : headers
-            }).then(function(response) {
-                var data = response.data;
-                if (data.name) {
-                    self.authenticated = true;
-                    self.user = data.name;
-                    $scope.userInfo = data.name;
-                    self.admin = data && data.roles && data.roles.indexOf("ROLE_ADMIN")>-1;
-                    $scope.roles = data.roles;
-                    console.log(data.roles);
-                    console.log(data.name);
-                } else {
-                    self.authenticated = false;
-                    self.admin = false;
-                }
-                callback && callback(true);
-            }, function() {
-                self.authenticated = false;
-                callback && callback(false);
-            });
-        }
+    self.login = function() {
 
-        authenticated();
-
-        self.credentials = {};
-        self.login = function() {
-
-            console.log("Login");
-
-            authenticated(self.credentials, function(authenticated) {
-                if (authenticated) {
-                    $location.path("/");
-                    self.error = false;
-                    $rootScope.authenticated = true;
-                    $scope.userInfo = self.user.username;
-                } else {
-                    $scope.errorForm = "Błędne dane!";
-                    $location.path("/login");
-                    self.error = true;
-                    $rootScope.authenticated = false;
-                }
-            })
-        };
+        authenticated(self.credentials, function(authenticated) {
+            if (authenticated) {
+                $location.path('/#login')
+                self.error = false;
+                $rootScope.authenticated = true;
+               // $scope.userInfo = self.user.username;
+            } else {
+                $scope.errorForm = "Błędne dane!";
+                $location.path("/login");
+                self.error = true;
+                $rootScope.authenticated = false;
+            }
+        })
+    };
 
     $scope.logout = function() {
-        $http.post('logout', {}).success(function() {
+
+        $http.post('/logout', {
+        }).success(function() {
+            $location.path("/login");
             $rootScope.authenticated = false;
-            $location.path("/");
+            $rootScope.userRoles = false;
+
+            $rootScope.info = "Zostałeś porawnie wylogowany!";
+
         }).error(function(data) {
             $rootScope.authenticated = false;
+            $rootScope.userRoles = false;
+            $rootScope.userInfo=false;
         });
     }
-
 }]);

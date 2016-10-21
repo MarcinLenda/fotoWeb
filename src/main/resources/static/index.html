@@ -21,8 +21,16 @@
 
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
+<style>
+	[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak
+	{
+		display: none
+		!important;
+	}
+</style>
+
 </head>
-<body ng-app="myApp">
+<body ng-app="myApp"  ng-cloak>
 <div id="header-wrapper">
 </div>
 
@@ -38,15 +46,13 @@
 				<li><a href="#/gallery" >Galeria</a></li>
 				<li><a href="#/contact" >Kontakt</a></li>
 				<li ng-show="!authenticated"><a href="#/login"  title="">Zaloguj</a></li>
-				<li ng-show="authenticated"><a href="#/admin"  title="">Administrator</a></li>
+				<li ng-show="userRoles"><a href="#/admin"  title="">Administrator</a></li>
 				<li ng-show="authenticated"><a href="" ng-click="logout()">Wyloguj</a></li>
 				<div id="user" ng-controller="navigation">
-					<h6 >Jesteś zalogowany jako: {{userInfo}}</h6>
+					<h6 ng-show="authenticated">{{showUserName()}}</h6>
 				</div>
 			</ul>
-
 		</div>
-
 
 	</div>
 </div>
@@ -72,6 +78,7 @@
 <script src="js/sendMail.js"></script>
 <script src="js/upload.js"></script>
 <script src="js/register.js"></script>
+<script src="js/services.js"></script>
 
 
 

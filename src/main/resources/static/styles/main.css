@@ -730,13 +730,13 @@ textarea {
 .info
 {
 	color: green;
-	font-size: 26px;
+	font-size:  18px;
 }
 
 .error
 {
 	color: #FA1126;
-	font-size: 26px;
+	font-size: 18px;
 }
 
 /*********************************************************************************/
@@ -795,9 +795,14 @@ textarea {
 	background-color: blue;
 }
 
+#user
+{
+	margin-top: 40px;
+}
+
 #user h6
 {
 	text-align: right;
 	color: red;
-	padding-right: 6px;
+	padding-right: 5px;
 }

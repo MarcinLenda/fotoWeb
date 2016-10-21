@@ -6,8 +6,8 @@
 
 app.controller('registerCtrl',function($scope, $http) {
 
-    $scope.mail = {};
-    $scope.info= "";
+    $scope.registerResponse = {};
+    //$scope.info= "";
     $scope.error= "";
     $scope.registerUser = function () {
         console.log('insta');
@@ -22,13 +22,14 @@ app.controller('registerCtrl',function($scope, $http) {
             headers : {'Content-type': 'application/json'}
         })
             .success(function (data) {
+                $scope.registerResponse = data;
 
-                $scope.error="";
-                $scope.info= "Wiadomość została wysłana";
+                console.log("+"+registerResponse);
 
             }).error(function (data) {
-            $scope.info = "";
-            $scope.error = "Błąd wysyłania wiadomości!";
+
+            $scope.registerResponse = data;
+
         });
     }
 });
