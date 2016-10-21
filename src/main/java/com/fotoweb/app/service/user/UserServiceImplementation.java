@@ -2,7 +2,6 @@ package com.fotoweb.app.service.user;
 
 import com.fotoweb.app.entity.UserEntity;
 import com.fotoweb.app.repository.UserRepository;
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -20,7 +19,7 @@ import java.util.List;
  * Created by Promar on 14.10.2016.
  */
 @Service
-public class UserServiceImplementation implements UserService, InitializingBean {
+public class UserServiceImplementation implements UserService {
 
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -116,14 +115,14 @@ public class UserServiceImplementation implements UserService, InitializingBean 
         return false;
     }
 
-    @Override
-    public void afterPropertiesSet() throws Exception {
-
-        if(userRepository.findByUsername("admin")==null) {
-
-            UserEntity user = new UserEntity("admin","mar@wp.pl","admin","admin","ADMIN");
-            user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-            userRepository.save(user);
-        }
-    }
+//    @Override
+//    public void afterPropertiesSet() throws Exception {
+//
+//        if(userRepository.findByUsername("admin")==null) {
+//
+//            UserEntity user = new UserEntity("admin","mar@wp.pl","admin","admin","ADMIN");
+//            user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+//            userRepository.save(user);
+//        }
+//    }
 }
