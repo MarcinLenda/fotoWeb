@@ -4,31 +4,31 @@
 
 
 
-app.controller('registerCtrl',function($scope, $http) {
+app.controller('registerCtrl',function($scope, $http, $location) {
 
     $scope.registerResponse = {};
-    //$scope.info= "";
+
+
     $scope.error= "";
     $scope.registerUser = function () {
         console.log('insta');
         $http({
             method  : 'POST',
             url     : 'http://localhost:8080/myAccount/register',
-            data    : {
+            data    :
+            {
                 "username": $scope.register.username,
                 "password": $scope.register.password,
+                "confirmPassword": $scope.register.confirmPassword,
                 "email": $scope.register.email
             },
             headers : {'Content-type': 'application/json'}
         })
             .success(function (data) {
-                $scope.registerResponse = data;
-
-                console.log("+"+registerResponse);
+                $location.path("/info");
 
             }).error(function (data) {
-
-            $scope.registerResponse = data;
+                $scope.registerResponse = data.Error;
 
         });
     }

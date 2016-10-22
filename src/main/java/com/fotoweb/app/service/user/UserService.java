@@ -12,6 +12,7 @@ public interface UserService {
 
     void register(UserEntity userEntity);
     UserEntity findByUsername(String username);
+    UserEntity findByEmail(String email);
     void editMyAccount(UserEntity newUserEntity, Principal principal);
     void editUser(UserEntity  newUserEntity);
     void deleteMyAccount(String password, Principal principal);

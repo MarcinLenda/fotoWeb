@@ -6,7 +6,6 @@ import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 /**
  * Created by promar7 on 14.07.16.
@@ -17,20 +16,16 @@ public class UserEntity {
     @Id
     private String ID;
 
-    @NotNull(message = "wartość nie może być pusta")
-    @Size(min = 3, max = 20, message = "Nazwa użytkownika musi zawierac minimalnie 3 znaki, a" +
-            "maksymanie 12.")
+    @NotNull
     private String username;
 
-    @NotNull(message = "Musisz podać hasło!")
-    @Size(min = 3, max = 20, message = "Hasło musi zawierac minimalnie 3 znaki, a" +
-           "maksymanie 12.")
+    @NotNull
     private String password;
 
     @Transient
     private String confirmPassword;
 
-    @NotNull(message = "Podaj adres e-mail!")
+    @NotNull()
     @Email
     private String email;
 

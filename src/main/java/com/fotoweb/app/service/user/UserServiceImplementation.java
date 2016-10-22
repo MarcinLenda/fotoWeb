@@ -47,6 +47,9 @@ public class UserServiceImplementation implements UserService {
     }
 
     @Override
+    public UserEntity findByEmail(String email) {return userRepository.findByEmail(email);}
+
+    @Override
     public void editMyAccount(UserEntity newUserEntity, Principal principal) {
         UserEntity userEntity = userRepository.findOne(principal.getName());
         userEntity.setPassword(bCryptPasswordEncoder.encode(newUserEntity.getPassword()));
