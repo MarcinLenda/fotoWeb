@@ -14,7 +14,7 @@ app.controller('registerCtrl',function($scope, $http, $location) {
         console.log('insta');
         $http({
             method  : 'POST',
-            url     : 'http://localhost:8080/myAccount/register',
+            url     : 'http://52.39.52.69:8080/myAccount/register',
             data    :
             {
                 "username": $scope.register.username,
