@@ -184,7 +184,7 @@ app.service('fileUpload', ['$http', function ($http) {
         fd.append('name', nameAlbum );
         fd.append('descritpion',description );
 
-        $http.post("http://localhost:8080/photo/upload", fd, {
+        $http.post("http://52.39.52.69:8080/photo/upload", fd, {
             transformRequest: angular.identity,
             headers: {'Content-Type': undefined},
             data: fd
