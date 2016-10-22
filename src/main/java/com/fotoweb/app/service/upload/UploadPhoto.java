@@ -1,12 +1,8 @@
 package com.fotoweb.app.service.upload;
 
 import com.fotoweb.app.entity.PhotoEntity;
-import com.fotoweb.app.entity.ThumbnailEntity;
 import com.fotoweb.app.repository.ThumbnailRepository;
 import com.fotoweb.app.service.photo.PhotoService;
-import net.coobird.thumbnailator.Thumbnailator;
-import net.coobird.thumbnailator.Thumbnails;
-import net.coobird.thumbnailator.name.Rename;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -36,7 +32,7 @@ public class UploadPhoto {
                 String filename = file.getOriginalFilename();
                 String path = "";
                 byte[] bytes = file.getBytes();
-                File serverFile = new File("C:\\Users\\Promar\\Documents\\Projekty\\fotoWeb_Version_1.0\\src\\main\\resources\\static\\images" + "\\" + nameAlbum + "\\" + filename);
+                File serverFile = new File("/home/ubuntu/fotoweb/fotoWeb/src/main/resources/static/images" + "/" + nameAlbum + "/" + filename);
 
                 File convertFile = new File(filename);
                 convertFile.createNewFile();
@@ -44,7 +40,7 @@ public class UploadPhoto {
                 fos.write(file.getBytes());
                 fos.close();
 
-                path = "images" + "\\" + nameAlbum + "\\" + filename;
+                path = "images" + "/" + nameAlbum + "/" + filename;
                 PhotoEntity photoEntity = new PhotoEntity(nameAlbum,description, path );
                 photoService.create(photoEntity);
                 BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(serverFile));
