@@ -28,7 +28,8 @@ app.controller('registerCtrl',function($scope, $http, $location) {
                 $location.path("/info");
 
             }).error(function (data) {
-                $scope.registerResponse = data;
+                $scope.registerResponse = data.Error;
+            console.log($scope.registerResponse);
 
         });
     }

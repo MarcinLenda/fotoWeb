@@ -25,7 +25,7 @@ public class MailController {
         this.mailService = mailService;
     }
 
-
+    @CrossOrigin(origins = "http://52.39.52.69:8080")
     @RequestMapping(value = "/mail", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     public SimpleMailMessage send(@RequestBody MailEntity mailEntity) {

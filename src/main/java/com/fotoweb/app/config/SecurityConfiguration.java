@@ -42,6 +42,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/fonts/**").permitAll()
                 .antMatchers("/styles/**").permitAll()
                 .antMatchers("/home/newUser").permitAll()
+                .antMatchers("/views/info.html ").permitAll()
                 .antMatchers("/myAccount/register").permitAll()
                 .antMatchers("/views/admin.html").hasRole("ADMIN")
                 .anyRequest().authenticated()

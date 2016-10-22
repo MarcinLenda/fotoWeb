@@ -32,17 +32,19 @@ public class ControllerPhoto {
         this.uploadPhoto = uploadPhoto;
     }
 
-
+    @CrossOrigin(origins = "http://52.39.52.69:8080")
     @RequestMapping(value = "/getPhoto", method = RequestMethod.POST)
     public PhotoEntity getPhoto(@RequestBody PhotoEntity photoEntity){
         return photoService.findPhoto(photoEntity);
     }
 
+    @CrossOrigin(origins = "http://52.39.52.69:8080")
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public void postPhoto(@RequestBody PhotoEntity photoEntity, BindingResult bindingResult){
         photoService.create(photoEntity);
     }
 
+    @CrossOrigin(origins = "http://52.39.52.69:8080")
     @RequestMapping(value = "/deletePhoto", method = RequestMethod.DELETE)
     public void deletePhoto(@RequestBody  Map<String, Boolean> ID) {
 
@@ -56,11 +58,13 @@ public class ControllerPhoto {
         }
     }
 
+    @CrossOrigin(origins = "http://52.39.52.69:8080")
     @RequestMapping(value = "/allPhotos", method = RequestMethod.GET)
     public List<PhotoEntity> findAllPhotos(){
         return photoService.findAll();
     }
 
+    @CrossOrigin(origins = "http://52.39.52.69:8080")
     @RequestMapping(value="/upload", method=RequestMethod.POST)
     public @ResponseBody
     ResponseEntity handleFileUpload(@RequestParam("file") MultipartFile file,
@@ -68,6 +72,7 @@ public class ControllerPhoto {
         return uploadPhoto.uploadPhoto(file, nameAlbum, description);
     }
 
+    @CrossOrigin(origins = "http://52.39.52.69:8080")
     @RequestMapping(value = "/uploadThumbnails", method = RequestMethod.POST)
     public @ResponseBody ResponseEntity handleFileUploadThumbnail(@RequestParam("file") MultipartFile file,
                                                                   @RequestParam("name") String nameAlbum){

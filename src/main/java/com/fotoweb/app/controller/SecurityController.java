@@ -23,6 +23,7 @@ public class SecurityController {
     @Resource
     private Validator validator;
 
+    @CrossOrigin(origins = "http://52.39.52.69:8080")
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public @ResponseBody
     ResponseEntity<?> regestriation(@RequestBody UserEntity userEntity,
@@ -39,11 +40,13 @@ public class SecurityController {
         return validator.checkingData(userEntity);
     }
 
+    @CrossOrigin(origins = "http://52.39.52.69:8080")
     @RequestMapping("/user")
     public Principal user(Principal user) {
         return user;
     }
 
+    @CrossOrigin(origins = "http://52.39.52.69:8080")
     @RequestMapping(value = "/find", method = RequestMethod.POST)
     public UserEntity userFind(@RequestParam("username") String username){
         return userService.findByUsername(username);
