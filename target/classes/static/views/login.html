@@ -1,0 +1,33 @@
+<div id="login">
+            <div class="formData">
+                <form name="formLogin" role="form" ng-submit="controller.login()" novalidate>
+
+                <h2>Logowanie</h2>
+
+                    <label>Username</label>
+                    <input  type="text" placeholder="Login" name="login"  ng-model="controller.credentials.username" ng-required="true" ng-minlength="3"
+                    ng-maxlength="10"/>
+                    <div ng-show="formLogin.login.$invalid && formLogin.login.$touched">
+                        <small style="color:#FA1126; display: block; text-align: center">Wprowadz poprawną nazwę!</small>
+                     </div>
+
+                    <label>Password</label>
+                    <input type="password" name="password"  placeholder="Password" ng-model="controller.credentials.password" ng-required="true"
+                    ng-minlength="3" ng-maxlength="10"/>
+                    <div ng-show="formLogin.password.$invalid && formLogin.password.$touched">
+                        <small style="color:#FA1126; display: block; text-align: center">Hasło nie poprawne!</small>
+                    </div>
+                        <div class="error">
+                        {{errorForm}}
+                        </div>
+                        <div ng-show="authenticated" class="info">
+                            {{info}}
+                        </div>
+
+                <button type="submit" ng-disabled="formLogin.$invalid" class="btn">Zaloguj</button>
+                <a href="#/register"  >Rejestracja</a>
+
+                </form>
+            </div>
+</div>
+

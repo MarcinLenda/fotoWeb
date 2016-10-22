@@ -1,0 +1,808 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+html, body
+{
+
+}
+
+body
+{
+	margin: 0px;
+	padding: 0px;
+	background: #0186ba;
+	font-family:  'Source Sans Pro', sans-serif;
+	font-size: 12pt;
+	font-weight: 300;
+	color: #000000;
+	background: url(../images/choice.jpg) no-repeat;
+	background-size: 100% 100%;
+
+
+}
+
+h1, h2
+{
+	margin: 0;
+	padding: 0;
+}
+h3
+{
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+h5
+{
+	font-size: 22px;
+	font-family: 'Source Sans Pro', sans-serif;
+	margin-left: 800px;
+	color: white;
+}
+
+p, ol, ul
+{
+	margin-top: 0;
+}
+
+ol, ul
+{
+	padding: 0;
+	list-style: none;
+}
+
+p
+{
+	line-height: 180%;
+}
+
+strong
+{
+}
+
+a
+{
+	color: #0186ba;
+}
+
+a:hover
+{
+	text-decoration: none;
+}
+
+.container
+{
+	overflow: hidden;
+	margin: 0em auto;
+	width: 1000px;
+}
+
+/*********************************************************************************/
+/* List Styles                                                                   */
+/*********************************************************************************/
+
+	ul.style1
+{
+}
+
+/*********************************************************************************/
+/* Social Icon Styles                                                            */
+/*********************************************************************************/
+
+	ul.contact
+{
+	margin: 0;
+	padding: 2em 0em 0em 0em;
+	list-style: none;
+}
+
+ul.contact li
+{
+	display: inline-block;
+	padding: 0em 0.30em;
+	font-size: 1em;
+}
+
+ul.contact li span
+{
+	display: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.contact li a
+{
+	color: #FFF;
+}
+
+ul.contact li a:before
+{
+	display: inline-block;
+	background: #3f3f3f;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 20px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+ul.contact li a.icon-twitter:before
+{
+	background: #2DAAE4;
+}
+
+ul.contact li a.icon-facebook:before
+{
+	background: #39599F;
+}
+
+ul.contact li a.icon-dribbble:before
+{
+	background: #C4376B;
+}
+
+ul.contact li a.icon-tumblr:before
+{
+	background: #31516A;
+}
+
+ul.contact li a.icon-rss:before
+{
+	background: #F2600B;
+}
+
+/*********************************************************************************/
+/* Button Style                                                                  */
+/*********************************************************************************/
+
+	.button
+{
+	display: inline-block;
+	padding: 1em 3em 1em 2em;
+	letter-spacing: 0.20em;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 0.90em;
+	color: #FFF;
+}
+
+.button:before
+{
+	display: inline-block;
+	background: #FFC31F;
+	margin-right: 1em;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 20px;
+	text-align: center;
+	color: #272925;
+}
+.button:hover
+{
+	cursor: hand;
+}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header-wrapper
+{
+		width: 100%;
+		background-size: cover;
+		margin-bottom:50px;
+	}
+
+#header
+{
+	position: relative;
+	padding: 5em 0em;
+
+}
+
+/*********************************************************************************/
+/* Logo                                                                          */
+/*********************************************************************************/
+
+	#logo
+{
+}
+
+#logo h1
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 1em 1em;
+	background: #0186ba;
+	border-radius: 15px;
+}
+
+#logo a
+{
+	text-decoration: none;
+	color: #FFF;
+}
+
+/*********************************************************************************/
+/* Menu                                                                          */
+/*********************************************************************************/
+
+	#menu
+{
+	position: absolute;
+	top: 4em;
+	right: 0;
+}
+
+#menu ul
+{
+	display: inline-block;
+}
+
+#menu li
+{
+	display: block;
+	float: left;
+	text-align: center;
+}
+
+#menu li a, #menu li span
+{
+	padding: 1em 1.5em;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.90em;
+	font-weight: 600;
+	color: #FFF;
+}
+
+#menu li:hover a, #menu li.active a, #menu li.active span
+{
+	background: #0186ba;
+	border-radius: 5px;
+}
+
+#menu .current_page_item a
+{
+	background: #0186ba;
+	border-radius: 5px;
+}
+
+#menu .icon
+{
+}
+
+
+/*********************************************************************************/
+/* Wrapper                                                                       */
+/*********************************************************************************/
+
+	#wrapper
+{
+		//*padding: 10em 0em;*//
+		width: 100%;
+		max-height: 600px;
+		text-align: center;
+		padding-bottom: 60px;
+}
+
+#wrapper span
+{
+	display: block;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 700;
+	font-size: 2.5em;
+	color: #FFF;
+}
+
+/*********************************************************************************/
+/* Page                                                                          */
+/*********************************************************************************/
+
+	#page
+	{
+		padding-bottom: 5em;
+
+	}
+	
+	#page h2
+	{
+		padding-bottom: 1.5em;
+		text-transform: uppercase;
+		font-size: 1.5em;
+	}
+
+/*********************************************************************************/
+/* Content                                                                       */
+/*********************************************************************************/
+
+	#content
+{
+}
+
+/*********************************************************************************/
+/* Sidebar                                                                       */
+/*********************************************************************************/
+
+	#sidebar
+{
+}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+	#footer
+{
+}
+
+/*********************************************************************************/
+/* Copyright                                                                     */
+/*********************************************************************************/
+
+	#copyright
+{
+		overflow: hidden;
+		padding: 5em 0em;
+		background-color: #0186ba;
+		width: 100%;
+		margin-top: 65px;
+		height: 40px;
+
+}
+
+#copyright p
+{
+	letter-spacing: 0.20em;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.80em;
+	color: rgba(255,255,255,0.6);
+}
+
+#copyright a
+{
+	text-decoration: none;
+	color: rgba(255,255,255,0.9);
+}
+
+/*********************************************************************************/
+/* Heading Titles                                                                */
+/*********************************************************************************/
+
+	.title
+{
+	margin-bottom: 3em;
+	text-transform: uppercase;
+}
+
+.title h2
+{
+	font-size: 2.8em;
+	font-weight: 700;
+}
+
+.title .byline
+{
+	font-size: 1.1em;
+	color: #6F6F6F;
+}
+
+/*********************************************************************************/
+/* Staff                                                                         */
+/*********************************************************************************/
+
+	#staff
+{
+	padding: 5em 0em;
+	text-align: center;
+}
+/*********************************************************************************/
+/* Aboutme                                                                     */
+/*********************************************************************************/
+
+#aboutme
+{
+	width: 100%;
+	height: 600px;
+	padding-top: 10px;
+
+}
+#aboutme figure
+{
+	float: left;
+
+
+}
+#aboutme figure img
+{
+	border: solid 4px whitesmoke;
+	width :700px;
+	height: 550px;
+
+}
+#aboutme article
+{
+
+	float: left;
+	color: white;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 25px;
+	width:500px;
+	text-align: justify;
+}
+
+/*********************************************************************************/
+/* Home                                                                      */
+/*********************************************************************************/
+
+#home
+{
+	padding-top: 150px;
+}
+
+/*********************************************************************************/
+/* Gallery                                                                       */
+/*********************************************************************************/
+
+#gallery
+{
+
+	height: 590px;
+	margin: 0 auto;
+	width: 75%;
+
+
+}
+
+#gallery .photo
+{
+	border: solid 2px whitesmoke;
+	background: #0186ba;
+	border-radius: 4px;
+	float: left;
+
+
+}
+#gallery .photo:hover
+{
+	opacity: 0.6;
+	filter : alpha(opacity=60);
+}
+
+/*********************************************************************************/
+/* Login                                                                       */
+/*********************************************************************************/
+
+#login
+{
+	width: 305px;
+	min-height: 330px;
+	margin: 0 auto;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	border: solid 1px #0186ba;
+	border-radius: 5px;
+	background:rgba(30,30,40,0.8);
+	text-align: center;
+}
+
+#login a
+{
+	font-size: 20px;
+}
+
+#login [type="submit"]
+{
+	cursor: hand;
+}
+
+.formData label
+{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	color: white;
+
+}
+.formData h2
+{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 28px;
+	color:#6D7781;
+	margin-bottom: 20px;
+}
+.btn {
+	display: inline-block;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	cursor: pointer;
+	padding: 10px 20px;
+	border: 1px solid #018dc4;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	font: normal 16px/normal "Comic Sans MS", cursive, sans-serif;
+	color: rgba(255,255,255,0.9);
+	text-indent: 4px;
+	-o-text-overflow: clip;
+	text-overflow: clip;
+	letter-spacing: 2px;
+	background:  #0186ba;
+	-webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+	box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+	text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+	-webkit-transition: color 300ms cubic-bezier(0.42, 0, 0.515, 0.245);
+	-moz-transition: color 300ms cubic-bezier(0.42, 0, 0.515, 0.245);
+	-o-transition: color 300ms cubic-bezier(0.42, 0, 0.515, 0.245);
+	transition: color 300ms cubic-bezier(0.42, 0, 0.515, 0.245);
+	margin-top: 30px;
+	margin-right: 20px;
+	width: 40%;
+}
+
+.btn:hover  {
+	background:#CC4949;
+	cursor: hand;
+}
+
+.formData input {
+	color:white;
+	font-family:  'Source Sans Pro', sans-serif;
+	font-weight:500;
+	font-size: 18px;
+	border-radius: 5px;
+	line-height: 22px;
+	background-color: transparent;
+	border:2px solid #0186ba;
+	transition: all 0.3s;
+	padding: 13px;
+	margin-bottom: 15px;
+	width:95%;
+	box-sizing: border-box;
+	outline:0;
+	margin-top: 8px;
+}
+
+
+.formData input:focus
+{
+	border:2px solid #CC4949;
+}
+
+input.ng-invalid.ng-touched
+{
+	border:2px solid #FA1126;
+}
+.formData a
+{
+	font-size: 15px;
+	color: gold;
+	text-decoration: none;
+	font-family:  'Source Sans Pro', sans-serif;
+}
+
+.formData a:hover
+{
+	color:red;
+}
+
+/*********************************************************************************/
+/* Register                                                                     */
+/*********************************************************************************/
+
+#register
+{
+	width: 305px;
+	min-height:480px;
+	margin: 0 auto;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	border: solid 1px #0186ba;
+	border-radius: 5px;
+	background:rgba(30,30,40,0.8);
+	text-align: center;
+}
+
+#register input.ng-invalid.ng-touched
+{
+	border:2px solid #FA1126;
+}
+
+/*********************************************************************************/
+/* Contact                                                                     */
+/*********************************************************************************/
+
+#contact  {
+	background:rgba(30,30,40,0.8);
+	width: 500px;
+	min-height: 405px;
+	margin: 0 auto;
+	border: solid 1px #0186ba;
+	border-radius: 5px;
+
+}
+#contact form {
+	max-width:420px;
+	margin:50px auto;
+	color: green;
+}
+
+
+
+
+
+.feedback-input {
+	color:white;
+	font-family:  'Source Sans Pro', sans-serif;
+	font-weight:500;
+	font-size: 18px;
+	border-radius: 5px;
+	line-height: 22px;
+	background-color: transparent;
+	border:2px solid #0186ba;
+	transition: all 0.3s;
+	padding: 13px;
+	margin-bottom: 15px;
+	width:100%;
+	box-sizing: border-box;
+	outline:0;
+}
+
+.feedback-input:focus { border:2px solid #CC4949; }
+
+textarea {
+	height: 150px;
+	line-height: 150%;
+	resize:vertical;
+}
+
+#contact [type="submit"] {
+	font-family:  'Source Sans Pro', sans-serif;
+	width: 100%;
+	background:#0186ba;
+	border-radius:5px;
+	border:0;
+	cursor:pointer;
+	color:white;
+	font-size:24px;
+	padding-top:10px;
+	padding-bottom:10px;
+	transition: all 0.3s;
+	margin-top:-4px;
+	font-weight:700;
+}
+#contact [type="submit"]:hover {
+	cursor: hand;
+	background:#CC4949; }
+
+/*********************************************************************************/
+/* Gallery                                                                  */
+/*********************************************************************************/
+
+#galleryAlbum h1
+{
+	color: #fff;
+	font-family: 'Source Sans Pro', sans-serif;
+	margin-bottom: 20px;
+}
+
+#galleryAlbum ul
+{
+	list-style-type: none;
+
+}
+
+#galleryAlbum img
+{
+	width:100px;
+	height:100px;
+	float:left;
+	border: solid 2px white;
+	margin-bottom: 30px;
+}
+
+#galleryAlbum img:first-child
+{
+	margin-left: 20px;
+}
+#galleryAlbum img:hover
+{
+	opacity: 0.7;
+	cursor: hand;
+}
+
+#galleryAlbum a
+{
+	color: white;
+	text-decoration: dashed;
+	color: #0186ba;
+}
+
+/*********************************************************************************/
+/* Comunicats                                                              */
+/*********************************************************************************/
+
+.info
+{
+	color: green;
+	font-size:  18px;
+}
+
+.error
+{
+	color: #FA1126;
+	font-size: 18px;
+}
+
+/*********************************************************************************/
+/*Admin panel                                                                 */
+/*********************************************************************************/
+#panelAdmin
+{
+	width: 700px;
+	min-height: 250px;
+	background-color: rgba(35,35,35,0.5);
+	font-family:  'Source Sans Pro', sans-serif;
+	margin: 0 auto;
+}
+#panelAdmin h1,h4,h6,label
+{
+	color: white;
+	font-family:  'Source Sans Pro', sans-serif;
+
+}
+
+#panelAdmin img
+{
+	width: 50px;
+	height: 50px;
+	float:left;
+	padding-left: 10px;
+	padding-bottom: 2px;
+}
+#panelAdmin [type="checkbox"]
+{
+	float: left;
+}
+
+#upload
+{
+	background-color: rgba(35,35,35,0.7);
+	font-family:  'Source Sans Pro', sans-serif;
+	width: 350px;
+	height: auto;
+	margin: 0 auto;
+}
+#upload h2
+{
+	color: white;
+}
+#deletePhoto
+{
+
+	width: 700px;
+	height: auto;
+	margin: 0 auto;
+}
+
+#deletePhoto [type="button"]
+{
+	background-color: blue;
+}
+
+#user
+{
+	margin-top: 40px;
+}
+
+#user h6
+{
+	text-align: right;
+	color: red;
+	padding-right: 5px;
+}

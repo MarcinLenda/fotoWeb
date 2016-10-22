@@ -1,0 +1,51 @@
+<div id="panelAdmin" xmlns="http://www.w3.org/1999/html">
+    <h1>Panel administracyjny</h1>
+
+    <select ng-model="myVar">
+        <option value="photoUpload">Dodawanie zdjęć
+        <option value="photoDelete">Usuwanie zdjęć
+        <option value="userBlock">Blokowanie użytkowników
+    </select>
+
+    <hr>
+    <div ng-switch="myVar">
+        <div ng-switch-when="photoUpload">
+            <div id="upload" ng-controller="myCtrlUpload">
+                <h2>Dodawanie zdjęć</h2>
+                <select ng-model="album" ng-options="x for x in names"></select>
+                <div ng-controller="myCtrlUpload">
+
+                    <textarea name="text" placeholder="Opis zdjęcia" ng-model="description"></textarea>
+                    <input type="file" file-model="myFile"/>
+                    <button ng-click="uploadFile()">Upload</button>
+                    <div class="info"></div>
+                    <div class="error"></div>
+                </div>
+            </div>
+        </div>
+
+        <div ng-switch-when="photoDelete" ng-controller="albumCtrl">
+          <div id="deletePhoto">
+
+                    <ul lightbox="images">
+                        <li ng-repeat="image in images">
+                            <img  src="{{image.url}}" ng-model="test">
+                                <input type="checkbox" ng-model="selected[image.id]">
+                        </li>
+                    </ul>
+
+            </div>
+            <input type="button" value="Usuń" ng-click="deletePhoto()">
+        </div>
+        <div ng-switch-when="userBlock">
+            <h1>Blokowanie użytkownika</h1>
+            <p>Trwają pracę nad tą opcją</p>
+        </div>
+        <div ng-switch-default>
+            <h4>Nie dokonano wyboru</h4>
+        </div>
+    </div>
+    <hr>
+</div>
+
+

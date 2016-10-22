@@ -1,0 +1,49 @@
+<div id="register">
+    <form name="form2"  ng-submit="registerUser()" novalidate>
+        <div class="formData">
+                <h2>Rejestracja</h2>
+            <label>Nazwa użytkownika</label>
+            <input  type="text" placeholder="Login" name="login"  ng-model="register.username" ng-required="true" ng-minlength="3"
+                    ng-maxlength="20"/>
+            <div ng-show="form2.login.$invalid && form2.login.$touched">
+                <small style="color:#FA1126; display: block; text-align: center">Nazwa musi składać się od 3 do 15 znaków!</small>
+            </div>
+
+            <label>Hasło</label>
+            <input type="password" name="password"  placeholder="Hasło" ng-model="register.password" ng-required="true"
+                   ng-minlength="3" ng-maxlength="20"/>
+
+            <div ng-show="form2.password.$invalid && form2.password.$touched">
+                <small style="color:#FA1126; display: block; text-align: center">Hasło musi się składać od 3 do 15 znaków!!</small>
+            </div>
+            <div ng-show="form2.password.length > 1 && form2.password.$touched">
+                <small style="color:#FA1126; display: block; text-align: center">Pole nie może być puste!</small>
+            </div>
+
+            <label>Powtórz hasło</label>
+            <input type="password" name="confirmPassword"  placeholder="Hasło" ng-model="register.confirmPassword" ng-required="true"
+                   ng-minlength="3" ng-maxlength="20"/>
+
+            <div ng-show="form2.register.confirmPassword.length==0 && form2.register.confirmPassword.$touched">
+                <small style="color:#FA1126; display: block; text-align: center">Powtórz hasło!</small>
+            </div>
+
+            <label>E-mail</label>
+            <input type="email" name="email"  placeholder="Twój email" ng-model="register.email" ng-required="true"
+                   ng-minlength="3" ng-maxlength="20"/>
+
+            <div ng-show="form2.email.$invalid && form2.email.$touched">
+                <small style="color:#FA1126; display: block; text-align: center">Niepoprawny email!</small>
+            </div>
+
+                <button type="submit" class="btn">Zarejestruj</button>
+                <a href="#/login" >Masz już konto?</a>
+
+                        <div class="error">
+                        <div ng-repeat="response in registerResponse">
+                            {{response}}
+                        </div>
+                        </div>
+        </div>
+    </form>
+</div>
