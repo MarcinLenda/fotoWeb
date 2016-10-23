@@ -3,6 +3,7 @@ package com.fotoweb.app.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -34,7 +35,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/index.html", "/views/home.html","/views/gallery.html","/views/aboutme.html","/views/contact.html", "/views/register.html", "/views/login.html", "/", "/favicon.ico", "/home/user",
-                        "/views/gallery/album1.html","/views/gallery/album2.html","/views/gallery/album3.html","/views/gallery/album4.html", "/views/register.html").permitAll()
+                        "/views/album/album1.html","/views/album/album2.html","/views/album/album3.html","/views/album/album4.html", "/views/register.html").permitAll()
                 .antMatchers("/js/**").permitAll()
                 .antMatchers("/bower_components/**").permitAll()
                 .antMatchers("/components/**").permitAll()

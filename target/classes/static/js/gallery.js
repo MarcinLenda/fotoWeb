@@ -19,7 +19,7 @@ app.controller('albumCtrl', function($scope, $http, $window) {
     $http({
       headers : {'Content-type': 'application/json'},
       method  : 'DELETE',
-      url     : 'http://localhost:8080/photo/deletePhoto',
+      url     : 'http://52.39.52.69:8080/photo/deletePhoto',
       data    : $scope.selected,
 
     })
@@ -37,7 +37,7 @@ app.controller('albumCtrl', function($scope, $http, $window) {
 
   $http({
     method  : 'GET',
-    url     : 'http://localhost:8080/photo/allPhotos',
+    url     : 'http://52.39.52.69:8080/photo/allPhotos',
     headers : {'Content-type': 'application/json'}
   })
       .success(function (data) {

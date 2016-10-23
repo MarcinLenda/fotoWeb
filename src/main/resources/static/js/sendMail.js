@@ -12,7 +12,7 @@ app.controller('mailCtrl',function($scope, $http) {
 
         $http({
             method  : 'POST',
-            url     : 'http://localhost:8080/mail',
+            url     : 'http://52.39.52.69:8080/mail',
             data    : {
                 "from": $scope.mail.from,
                 "subject": $scope.mail.topic,
