@@ -41,7 +41,7 @@ public class UploadPhoto {
 //                fos.write(file.getBytes());
 //                fos.close();
 
-                path = "images" + "/" + "album1" + "/" + filename;
+                path = "/home/ubuntu/fotoweb/fotoWeb/src/main/resources/static/images/album1"+filename;
                 PhotoEntity photoEntity = new PhotoEntity(nameAlbum,description, path );
                 photoService.create(photoEntity);
                 BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(serverFile));

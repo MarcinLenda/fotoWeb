@@ -189,68 +189,68 @@ ul.contact li a.icon-rss:before
 /*********************************************************************************/
 
 	#header-wrapper
-{
+	{
 		width: 100%;
 		background-size: cover;
 		margin-bottom:50px;
 	}
 
 #header
-{
+	{
 	position: relative;
 	padding: 5em 0em;
 
-}
+	}
 
 /*********************************************************************************/
 /* Logo                                                                          */
 /*********************************************************************************/
 
 	#logo
-{
-}
+	{
+	}
 
 #logo h1
-{
+	{
 	position: absolute;
 	top: 0;
 	left: 0;
 	padding: 1em 1em;
 	background: #0186ba;
 	border-radius: 15px;
-}
+	}
 
 #logo a
-{
+	{
 	text-decoration: none;
 	color: #FFF;
-}
+	}
 
 /*********************************************************************************/
 /* Menu                                                                          */
 /*********************************************************************************/
 
 	#menu
-{
+	{
 	position: absolute;
 	top: 4em;
 	right: 0;
-}
+	}
 
 #menu ul
-{
+	{
 	display: inline-block;
-}
+	}
 
 #menu li
-{
+	{
 	display: block;
 	float: left;
 	text-align: center;
-}
+	}
 
 #menu li a, #menu li span
-{
+	{
 	padding: 1em 1.5em;
 	letter-spacing: 1px;
 	text-decoration: none;
@@ -258,23 +258,23 @@ ul.contact li a.icon-rss:before
 	font-size: 0.90em;
 	font-weight: 600;
 	color: #FFF;
-}
+	}
 
 #menu li:hover a, #menu li.active a, #menu li.active span
-{
+	{
 	background: #0186ba;
 	border-radius: 5px;
-}
+	}
 
 #menu .current_page_item a
-{
+	{
 	background: #0186ba;
 	border-radius: 5px;
-}
+	}
 
 #menu .icon
-{
-}
+	{
+	}
 
 
 /*********************************************************************************/

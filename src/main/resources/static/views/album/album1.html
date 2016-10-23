@@ -3,10 +3,10 @@
     <h1>{{'Album: Opuszczone miejsca'}}</h1>
     <h3><a ng-href="#/gallery/">->Powrót do albumu głównego</a></h3>
     <ul lightbox="images">
-        <!--<li ng-repeat="image in images">-->
+        <li ng-repeat="image in images">
 
-            <a ng-show="image.nameAlbum=='album1'" href="images/album1/galeria1.jpg" data-lightbox="image-1" data-title={{image.description}} ><img  src="images/album1/galeria1.jpg"></a>
-        <!--</li>-->
+            <a ng-show="image.nameAlbum=='album1'" href={{image.url}} data-lightbox="image-1" data-title={{image.description}} ><img  src="{{image.url}}"></a>
+        </li>
     </ul>
 </div>
 
