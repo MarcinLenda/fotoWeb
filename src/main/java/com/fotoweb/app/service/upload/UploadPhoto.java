@@ -32,16 +32,12 @@ public class UploadPhoto {
                 String filename = file.getOriginalFilename();
                 String path = "";
                 byte[] bytes = file.getBytes();
-               File serverFile = new File("/home/ubuntu/fotoweb/fotoWeb/src/main/resources/static/images" + "/" + nameAlbum + "/" + filename);
-//                File serverFile = new File("/home/ubuntu/fotoweb/fotoWeb/src/main/resources/static/images/album1"+filename);
+                File serverFile = new File("/home/ubuntu/fotoweb/fotoWeb/src/main/resources/static/images" + "/" + nameAlbum + "/" + filename);
+                //File serverFile = new File("/home/ubuntu/fotoweb/fotoWeb/src/main/resources/static/images/album1"+filename);
 
-//                File convertFile = new File(filename);
-//                convertFile.createNewFile();
-//                FileOutputStream fos = new FileOutputStream(convertFile);
-//                fos.write(file.getBytes());
-//                fos.close();
 
-                path = "/home/ubuntu/fotoweb/fotoWeb/src/main/resources/static/images/album1/"+filename;
+
+                path = "/images/"+nameAlbum+"/"+filename;
                 PhotoEntity photoEntity = new PhotoEntity(nameAlbum,description, path );
                 photoService.create(photoEntity);
                 BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(serverFile));

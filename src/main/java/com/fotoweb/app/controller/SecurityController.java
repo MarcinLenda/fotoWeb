@@ -28,15 +28,6 @@ public class SecurityController {
     public @ResponseBody
     ResponseEntity<?> regestriation(@RequestBody UserEntity userEntity,
                                  BindingResult bindingResult) {
-//        if(bindingResult.hasErrors()){
-//            List<FieldError> errors = bindingResult.getFieldErrors();
-//            errors.forEach(error-> response.put("chuja", "chuja dodano"));
-//        }
-//          us
-//        System.out.println(response.toString());
-
-
-
         return validator.checkingData(userEntity);
     }
 

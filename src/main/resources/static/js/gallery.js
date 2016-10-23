@@ -6,6 +6,7 @@ app.controller('albumCtrl', function($scope, $http, $window) {
   $scope.deleteError = "Nie udało się usunąć zdjęcia!";
   $scope.images = {};
   $scope.selected ={};
+  $scope.url = {};
 
 
 
@@ -42,6 +43,7 @@ app.controller('albumCtrl', function($scope, $http, $window) {
   })
       .success(function (data) {
         $scope.images = data;
+        $scope.url = data;
         console.log(data.url);
       }).error(function (data) {
 
