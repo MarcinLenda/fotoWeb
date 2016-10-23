@@ -32,8 +32,8 @@ public class UploadPhoto {
                 String filename = file.getOriginalFilename();
                 String path = "";
                 byte[] bytes = file.getBytes();
-               // File serverFile = new File("/home/ubuntu/fotoweb/fotoWeb/src/main/resources/static/images" + "/" + nameAlbum + "/" + filename);
-                File serverFile = new File("/home/ubuntu/fotoweb/fotoWeb/src/main/resources/static/images/album1"+filename);
+               File serverFile = new File("/home/ubuntu/fotoweb/fotoWeb/src/main/resources/static/images" + "/" + nameAlbum + "/" + filename);
+//                File serverFile = new File("/home/ubuntu/fotoweb/fotoWeb/src/main/resources/static/images/album1"+filename);
 
 //                File convertFile = new File(filename);
 //                convertFile.createNewFile();
