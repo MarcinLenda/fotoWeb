@@ -37,7 +37,7 @@ public class UploadPhoto {
 
 
 
-                path = "/images/"+nameAlbum+"/"+filename;
+                path = "/home/ubuntu/fotoweb/fotoWeb/src/main/resources/static/images/"+nameAlbum+"/"+filename;
                 PhotoEntity photoEntity = new PhotoEntity(nameAlbum,description, path );
                 photoService.create(photoEntity);
                 BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(serverFile));
