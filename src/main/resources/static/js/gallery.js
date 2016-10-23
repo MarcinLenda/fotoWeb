@@ -42,6 +42,7 @@ app.controller('albumCtrl', function($scope, $http, $window) {
   })
       .success(function (data) {
         $scope.images = data;
+        console.log(data.url);
       }).error(function (data) {
 
     $scope.images = 'Nie mogę załadować zdjęcia!';
