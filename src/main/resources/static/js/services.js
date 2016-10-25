@@ -114,7 +114,6 @@ app.service('service', function ($rootScope, $http, $location ) {
         return "Jesteś zalogowany jako: "+_username;
     };
 
-    console.log("tu"+$rootScope.userRoles);
     $http({
         method: 'GET',
         url: '/myAccount/user'
@@ -122,9 +121,6 @@ app.service('service', function ($rootScope, $http, $location ) {
         var data = response.data;
         $rootScope.authenticated = true;
         setUsername(data.name);
-
-        console.log("data"+data.role);
-
         if(data.name=='ADMIN'){
             $rootScope.userRoles = true;
             console.log("Zmieniam");
@@ -132,7 +128,7 @@ app.service('service', function ($rootScope, $http, $location ) {
 
     }, function errorCallback(response) {
         $rootScope.authenticated = false;
-        console.log('authenticated false');
+
     });
 
         this.authenticated = function(credentials, callback) {

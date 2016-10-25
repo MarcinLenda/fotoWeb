@@ -35,7 +35,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/index.html", "/views/home.html","/views/gallery.html","/views/aboutme.html","/views/contact.html", "/views/register.html", "/views/login.html", "/", "/favicon.ico", "/home/user",
-                        "/views/album/album1.html","/views/album/album2.html","/views/album/album3.html","/views/album/album4.html", "/views/register.html").permitAll()
+                        "/views/album/album.html","/views/register.html").permitAll()
                 .antMatchers("/js/**").permitAll()
                 .antMatchers("/bower_components/**").permitAll()
                 .antMatchers("/components/**").permitAll()
@@ -47,9 +47,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/myAccount/register").permitAll()
                 .antMatchers("/views/admin.html").hasRole("ADMIN")
                 .anyRequest().authenticated()
-                .and()
-                .logout()
-                .logoutSuccessUrl("http://localhost:8080/#/login")
                 .and()
                 .csrf().disable();
     }

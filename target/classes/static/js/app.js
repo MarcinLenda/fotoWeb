@@ -21,7 +21,7 @@ var app = angular.module('myApp', [
         .when('/login', {
             templateUrl: 'views/login.html',
             controller: 'navigation',
-         	controllerAs: 'controller'
+            controllerAs: 'controller'
         })
         .when('/logout', {
             templateUrl: 'views/home.html',
@@ -61,8 +61,8 @@ var app = angular.module('myApp', [
         })
         .when('/info', {
             templateUrl: 'views/info.html',
-            controller: ''
+            controller: 'registerCtr'
         }).otherwise({redirectTo: '/'});
-        
+
     $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 })

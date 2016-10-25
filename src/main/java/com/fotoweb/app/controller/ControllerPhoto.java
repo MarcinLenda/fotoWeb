@@ -71,4 +71,11 @@ public class ControllerPhoto {
                                     @RequestParam("name") String nameAlbum, @RequestParam("descritpion")String description){
         return uploadPhoto.uploadPhoto(file, nameAlbum, description);
     }
+
+    @CrossOrigin(origins = "http://52.39.52.69:8080")
+    @RequestMapping(value="/findByNameAlbum", method=RequestMethod.POST)
+    public @ResponseBody
+    List<PhotoEntity> findByNameAlbum(String nameAlbum){
+        return photoService.findByNameAlbum(nameAlbum);
+    }
 }

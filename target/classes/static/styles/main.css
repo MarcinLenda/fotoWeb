@@ -80,7 +80,7 @@ a:hover
 /* List Styles                                                                   */
 /*********************************************************************************/
 
-	ul.style1
+ul.style1
 {
 }
 
@@ -88,7 +88,7 @@ a:hover
 /* Social Icon Styles                                                            */
 /*********************************************************************************/
 
-	ul.contact
+ul.contact
 {
 	margin: 0;
 	padding: 2em 0em 0em 0em;
@@ -155,7 +155,7 @@ ul.contact li a.icon-rss:before
 /* Button Style                                                                  */
 /*********************************************************************************/
 
-	.button
+.button
 {
 	display: inline-block;
 	padding: 1em 3em 1em 2em;
@@ -188,69 +188,69 @@ ul.contact li a.icon-rss:before
 /* Header                                                                        */
 /*********************************************************************************/
 
-	#header-wrapper
-	{
-		width: 100%;
-		background-size: cover;
-		margin-bottom:50px;
-	}
+#header-wrapper
+{
+	width: 100%;
+	background-size: cover;
+	margin-bottom:50px;
+}
 
 #header
-	{
+{
 	position: relative;
 	padding: 5em 0em;
 
-	}
+}
 
 /*********************************************************************************/
 /* Logo                                                                          */
 /*********************************************************************************/
 
-	#logo
-	{
-	}
+#logo
+{
+}
 
 #logo h1
-	{
+{
 	position: absolute;
 	top: 0;
 	left: 0;
 	padding: 1em 1em;
 	background: #0186ba;
 	border-radius: 15px;
-	}
+}
 
 #logo a
-	{
+{
 	text-decoration: none;
 	color: #FFF;
-	}
+}
 
 /*********************************************************************************/
 /* Menu                                                                          */
 /*********************************************************************************/
 
-	#menu
-	{
+#menu
+{
 	position: absolute;
 	top: 4em;
 	right: 0;
-	}
+}
 
 #menu ul
-	{
+{
 	display: inline-block;
-	}
+}
 
 #menu li
-	{
+{
 	display: block;
 	float: left;
 	text-align: center;
-	}
+}
 
 #menu li a, #menu li span
-	{
+{
 	padding: 1em 1.5em;
 	letter-spacing: 1px;
 	text-decoration: none;
@@ -258,36 +258,36 @@ ul.contact li a.icon-rss:before
 	font-size: 0.90em;
 	font-weight: 600;
 	color: #FFF;
-	}
+}
 
 #menu li:hover a, #menu li.active a, #menu li.active span
-	{
+{
 	background: #0186ba;
 	border-radius: 5px;
-	}
+}
 
 #menu .current_page_item a
-	{
+{
 	background: #0186ba;
 	border-radius: 5px;
-	}
+}
 
 #menu .icon
-	{
-	}
+{
+}
 
 
 /*********************************************************************************/
 /* Wrapper                                                                       */
 /*********************************************************************************/
 
-	#wrapper
+#wrapper
 {
-		//*padding: 10em 0em;*//
-		width: 100%;
-		max-height: 600px;
-		text-align: center;
-		padding-bottom: 60px;
+//*padding: 10em 0em;*//
+width: 100%;
+	max-height: 600px;
+	text-align: center;
+	padding-bottom: 60px;
 }
 
 #wrapper span
@@ -304,24 +304,24 @@ ul.contact li a.icon-rss:before
 /* Page                                                                          */
 /*********************************************************************************/
 
-	#page
-	{
-		padding-bottom: 5em;
+#page
+{
+	padding-bottom: 5em;
 
-	}
-	
-	#page h2
-	{
-		padding-bottom: 1.5em;
-		text-transform: uppercase;
-		font-size: 1.5em;
-	}
+}
+
+#page h2
+{
+	padding-bottom: 1.5em;
+	text-transform: uppercase;
+	font-size: 1.5em;
+}
 
 /*********************************************************************************/
 /* Content                                                                       */
 /*********************************************************************************/
 
-	#content
+#content
 {
 }
 
@@ -329,7 +329,7 @@ ul.contact li a.icon-rss:before
 /* Sidebar                                                                       */
 /*********************************************************************************/
 
-	#sidebar
+#sidebar
 {
 }
 
@@ -337,7 +337,7 @@ ul.contact li a.icon-rss:before
 /* Footer                                                                        */
 /*********************************************************************************/
 
-	#footer
+#footer
 {
 }
 
@@ -345,14 +345,14 @@ ul.contact li a.icon-rss:before
 /* Copyright                                                                     */
 /*********************************************************************************/
 
-	#copyright
+#copyright
 {
-		overflow: hidden;
-		padding: 5em 0em;
-		background-color: #0186ba;
-		width: 100%;
-		margin-top: 65px;
-		height: 40px;
+	overflow: hidden;
+	padding: 5em 0em;
+	background-color: #0186ba;
+	width: 100%;
+	margin-top: 65px;
+	height: 40px;
 
 }
 
@@ -375,7 +375,7 @@ ul.contact li a.icon-rss:before
 /* Heading Titles                                                                */
 /*********************************************************************************/
 
-	.title
+.title
 {
 	margin-bottom: 3em;
 	text-transform: uppercase;
@@ -397,7 +397,7 @@ ul.contact li a.icon-rss:before
 /* Staff                                                                         */
 /*********************************************************************************/
 
-	#staff
+#staff
 {
 	padding: 5em 0em;
 	text-align: center;

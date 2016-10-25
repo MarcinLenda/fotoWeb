@@ -45,4 +45,9 @@ public class PhotoServiceImplementation implements PhotoService {
     public PhotoEntity create(PhotoEntity photoEntity) {
         return photoRepository.save(photoEntity);
     }
+
+    @Override
+    public List<PhotoEntity> findByNameAlbum(String nameAlbum) {
+        return findByNameAlbum(nameAlbum);
+    }
 }
