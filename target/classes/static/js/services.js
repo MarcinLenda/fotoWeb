@@ -140,7 +140,7 @@ app.service('service', function ($rootScope, $http, $location ) {
         } : {};
 
 
-        $http.get('/myAccount/user', {
+        $http.get('http://52.39.52.69:8080/myAccount/user', {
             headers : headers
         }).then(function(response) {
             var data = response.data;
