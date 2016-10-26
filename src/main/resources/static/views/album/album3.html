@@ -2,7 +2,7 @@
     <h1>{{'Album: Piłka nożna'}}</h1>
     <h3><a ng-href="#/gallery/">->Powrót do albumu głównego</a></h3>
     <ul lightbox="images">
-        <li ng-repeat="image in images">
+        <li ng-show="image.nameAlbum=='album3'" ng-repeat="image in images">
 
             <a href={{image.url}} data-lightbox="image-1" data-title={{image.description}} ><img  src="{{image.url}}"></a>
         </li>
